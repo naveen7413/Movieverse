@@ -1,0 +1,383 @@
+/* ===================== GLOBAL STYLING ===================== */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================== PROFILE MODAL ===================== */
+.profile-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999 !important;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.profile-box {
+  background: var(--glass, #111);
+  color: white;
+  padding: 25px 30px;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  animation: fadeIn 0.2s ease;
+  z-index: 10000;
+}
+
+.profile-box h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.profile-box label {
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.profile-box input[type="text"],
+.profile-box input[type="password"],
+.profile-box input[type="color"] {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.save-btn,
+.cancel-btn,
+.password-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.save-btn {
+  background: #5678ff;
+  color: white;
+}
+
+.cancel-btn {
+  background: #ff4d4d;
+  color: white;
+}
+
+.password-btn {
+  background: #f0a500;
+  color: white;
+}
+
+/* ===================== PASSWORD MODAL ===================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.password-modal {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  padding: 25px 30px;
+  border-radius: 20px;
+  width: 400px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.7);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.password-modal h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.password-modal input {
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.password-modal .save-btn {
+  background: rgba(0,198,255,0.85);
+  box-shadow: 0 4px 20px rgba(0,198,255,0.4);
+}
+
+.password-modal .close-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* ===================== PROFILE HEADER ===================== */
+.profile-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: 0.3s ease;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.profile-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 38px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.profile-header p {
+  margin: 4px 0;
+  color: #ddd;
+  font-size: 15px;
+}
+
+.joined {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ===================== EDIT SECTION ===================== */
+.edit-section {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 35px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.6);
+}
+
+.edit-section h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.edit-section label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+.edit-section input[type="text"],
+.edit-section input[type="color"],
+.edit-section input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.edit-section input:focus {
+  background: rgba(255,255,255,0.2);
+}
+
+.save-btn, .password-btn {
+  padding: 10px 22px;
+  margin-right: 10px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.save-btn {
+  background: rgba(255, 65, 108, 0.8);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(255,65,108,0.4);
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255,65,108,0.6);
+}
+
+.password-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.password-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ===================== WATCHLIST ===================== */
+.watchlist-section h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.watch-item {
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+}
+
+.watch-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+}
+
+.watch-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.watch-info {
+  padding: 12px;
+}
+
+.watch-info h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.watch-info p {
+  margin: 0;
+  color: #ddd;
+}
+
+/* SCROLLBAR */
+.watchlist-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.watchlist-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.watchlist-grid::-webkit-scrollbar-thumb {
+  background: #5678ff;
+  border-radius: 3px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-circle {
+    width: 75px;
+    height: 75px;
+    font-size: 30px;
+  }
+
+  .watch-item img {
+    height: 180px;
+  }
+
+  .profile-box {
+    padding: 20px;
+  }
+
+  .watchlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-container {
+    padding: 15px;
+  }
+
+  .edit-section,
+  .password-modal {
+    padding: 18px;
+  }
+
+  .watch-item img {
+    height: 150px;
+  }
+
+  .save-btn,
+  .password-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

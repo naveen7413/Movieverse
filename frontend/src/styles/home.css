@@ -1,0 +1,215 @@
+/* --------------------------- */
+/* PAGE BASE */
+/* --------------------------- */
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+  background: #0e0e0e;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.rows-wrapper {
+  padding: 30px 0 80px;
+}
+
+
+/* --------------------------- */
+/* SECTION HEADERS */
+/* --------------------------- */
+.row-section {
+  margin-bottom: 40px;
+}
+
+.row-header {
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  margin-bottom: 15px;
+}
+
+.row-header h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+
+/* --------------------------- */
+/* MOVIE ROW (Slider) */
+/* --------------------------- */
+.movie-row {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-left: 60px;
+}
+
+.movie-row .slider {
+  display: flex;
+  gap: 18px;
+  transition: transform 0.4s ease-in-out;
+  animation: autoScroll 25s linear infinite;
+}
+
+.movie-row:hover .slider {
+  animation-play-state: paused;
+}
+
+@keyframes autoScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-40%); }
+}
+
+
+/* MOVIE CARD */
+.movie-card {
+  min-width: 160px;
+  height: 240px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: #111;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 3D Hover Effect */
+.movie-card:hover {
+  transform: scale(1.08) translateY(-5px) rotate3d(1, 1, 0, 6deg);
+  box-shadow: 0 15px 25px rgba(255, 0, 0, 0.45);
+}
+
+/* View Overlay */
+.movie-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.movie-card:hover .overlay {
+  opacity: 1;
+}
+
+
+/* --------------------------- */
+/* HERO BANNER */
+/* --------------------------- */
+.hero-banner {
+  width: 100%;
+  height: 78vh;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid #111;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(75%);
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 18%;
+  left: 60px;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-overview {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.hero-buttons button {
+  background: #e50914;
+  padding: 10px 26px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.hero-buttons button:hover {
+  background: #ff0a16;
+  transform: scale(1.05);
+}
+
+
+/* --------------------------- */
+/* TOP 10 GRID */
+/* --------------------------- */
+.top10 {
+  margin-top: 50px;
+  padding: 0 60px;
+}
+
+.top10 h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.top10-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 25px;
+}
+
+.top10-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.top10-card img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* Rank Badge */
+.rank-number {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #e50914;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.top10-card:hover {
+  transform: scale(1.07) rotate3d(1, 1, 0, 6deg);
+  box-shadow: 0 15px 25px rgba(255, 0, 0, 0.45);
+}
+
+.top10-card p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
