@@ -360,7 +360,7 @@ export default function Recommend() {
     <div className="recommend-page">
       {/* topbar */}
       <div className="recommend-topbar">
-        <h1>AI Movie Recommendations</h1>
+        <h1>MovieVerse Movie Recommendations</h1>
 
         <div className="controls">
           <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
